@@ -21,7 +21,7 @@ every varible pass to my API should put in self stack sequentially
     - pattern==0: simple switch 
     - pattern==1: L2R 
     - pattern==2: R2L 
-    `會根據first and second state及pattern去找出LED燈亮的順序`
+    - `會根據first and second state及pattern去找出LED燈亮的順序`
 <!-- - LED_L2R(Pn)
 - LED_R2L(Pn)
 - LED_costum_switch(Pn,pattarn1,pattarn2) -->
