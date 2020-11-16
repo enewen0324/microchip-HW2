@@ -31,3 +31,26 @@ every varible pass to my API should put in self stack sequentially
 - PUSH_ALL() //Wrong ,dont use it. If you are interested in why, you can try to call this api
 - POP_ALL() //Wrong ,dont use it. If you are interested in why, you can try to call this api 
 ## QUICK START
+![](https://i.imgur.com/dnFPcQk.png)
+in phase1
+```
+    ; 忘記亮設1還是暗設1了
+    ; 此範例為亮設1
+    MOV 10H,#01H  ;00000001
+    MOV 11H,#02H  ;00000010
+    MOV 12H,#0F0H ;11110000
+    MOV 13H,#0FH  ;00001111
+
+    MOV R0,20H
+    INC R0
+    MOV @R0,#Pn1H
+    INC R0
+    MOV @R0,#02H ;pattern R2L
+    INC R0
+    MOV @R0,#Pn2H
+    INC R0
+    MOV @R0,#00H ;pattern simple switch
+    MOV 20H,R0
+    
+    ACALL two_led_control
+```
