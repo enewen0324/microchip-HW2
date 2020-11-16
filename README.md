@@ -25,11 +25,16 @@ every varible pass to my API should put in self stack sequentially
 <!-- - LED_L2R(Pn)
 - LED_R2L(Pn)
 - LED_costum_switch(Pn,pattarn1,pattarn2) -->
-- short_pause() //total pause time is #FFH cycle
-- long_pause()  //total pause time is #FFH*FFH cycle
-- custom_pause(time1,time2) //total pause time is time1*time2 cycle
-- PUSH_ALL() //Wrong ,dont use it. If you are interested in why, you can try to call this api
-- POP_ALL() //Wrong ,dont use it. If you are interested in why, you can try to call this api 
+- short_pause() 
+    - total pause time is #FFH cycle
+- long_pause()
+    - total pause time is #FFH*FFH cycle
+- custom_pause(time1,time2)
+    - total pause time is time1*time2 cycle
+- PUSH_ALL()
+    - Wrong ,dont use it. If you are interested in why, you can try to call this api
+- POP_ALL()
+    - Wrong ,dont use it. If you are interested in why, you can try to call this api 
 ## QUICK START
 ![](https://i.imgur.com/dnFPcQk.png)
 in phase1
