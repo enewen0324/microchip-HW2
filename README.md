@@ -28,7 +28,7 @@ every varible pass to my API should put in self stack sequentially
 - short_pause() 
     - total pause time is #FFH cycle
 - long_pause()
-    - total pause time is #FFH*FFH cycle
+    - total pause time is #10H*FFH*FFH cycle
 - custom_pause(time1,time2)
     - total pause time is time1*time2 cycle
 - PUSH_ALL()
@@ -39,20 +39,14 @@ every varible pass to my API should put in self stack sequentially
 ![](https://i.imgur.com/dnFPcQk.png)
 in phase1
 ```
-    ; 忘記亮設1還是暗設1了
-    ; 此範例為亮設1
-    MOV 10H,#01H  ;00000001
-    MOV 11H,#02H  ;00000010
+    MOV 10H,#07FH  ;01111111
+    MOV 11H,#0BFH  ;10111111
     MOV 12H,#0F0H ;11110000
     MOV 13H,#0FH  ;00001111
 
     MOV R0,20H
     INC R0
-    MOV @R0,#Pn1H
-    INC R0
     MOV @R0,#02H ;pattern R2L
-    INC R0
-    MOV @R0,#Pn2H
     INC R0
     MOV @R0,#00H ;pattern simple switch
     MOV 20H,R0
