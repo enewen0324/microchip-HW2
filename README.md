@@ -46,7 +46,7 @@ in phase1
 
     MOV R0,20H
     INC R0
-    MOV @R0,#02H ;pattern R2L
+    MOV @R0,#01H ;pattern L2R
     INC R0
     MOV @R0,#00H ;pattern simple switch
     MOV 20H,R0
